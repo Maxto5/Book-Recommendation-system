@@ -1,6 +1,9 @@
 import streamlit as st
+import streamlit.components.v1 as components
+
 import pandas as pd
 import Book_Recommendation_system
+
 st.set_page_config(layout="wide")
 st.title("Book Recommendation System")
 st.subheader("Collaborative filtering using KNN")
@@ -21,4 +24,4 @@ with col2:
        #st.dataframe(Book_Recommendation_system.book_user_ratings)
        #out = pd.DataFrame(output,columns=['Book-Title'])
        st.dataframe(output)
-<div style="text-align: center">"BCSC01/0043/2018 \t Barasa Mathews Wafula \t" &copy 2022 </div>
+ components.html(""" <div style="text-align: center">"BCSC01/0043/2018 \t Barasa Mathews Wafula \t" &copy 2022 </div>""")
