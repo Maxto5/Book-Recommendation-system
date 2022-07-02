@@ -21,8 +21,8 @@ with col2:
        #st.dataframe(Book_Recommendation_system.book_user_ratings)
        #out = pd.DataFrame(output,columns=['Book-Title'])
        st.dataframe(output)
-       
-   
+    
+st.write("BCSC01/0043/2018 \t Barasa Mathews Wafula \t 2022")
 
 
 
