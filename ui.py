@@ -24,4 +24,4 @@ with col2:
        #st.dataframe(Book_Recommendation_system.book_user_ratings)
        #out = pd.DataFrame(output,columns=['Book-Title'])
        st.dataframe(output)
- components.html(""" <div style="text-align: center">"BCSC01/0043/2018 \t Barasa Mathews Wafula \t" &copy 2022 </div>""")
+components.html(""" <div style="text-align: center">"BCSC01/0043/2018 \t Barasa Mathews Wafula \t" &copy 2022 </div>""")
