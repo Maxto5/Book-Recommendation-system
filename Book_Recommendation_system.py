@@ -15,6 +15,7 @@
 
 import numpy as np
 import pandas as pd
+import scipy
 
 books = pd.read_csv('book.csv', dtype='unicode')
 users = pd.read_csv('Users.csv')
@@ -53,7 +54,7 @@ train_pivot.head()
 
 
 print("create sparse matrix")
-import scipy
+
 from scipy.sparse import csr_matrix
 train_csr =  csr_matrix(train_pivot)
 
