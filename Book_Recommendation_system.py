@@ -61,7 +61,7 @@ train_csr =  csr_matrix(train_pivot)
 
 print("apply knn")
 from sklearn.neighbors import NearestNeighbors
-model_knn = NearestNeighbors(metric='euclidean',algorithm='auto')
+model_knn = NearestNeighbors(metric='euclidean',algorithm='brute')
 model_knn.fit(train_csr)
 
 
