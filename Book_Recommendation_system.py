@@ -53,6 +53,7 @@ train_pivot.head()
 
 
 print("create sparse matrix")
+import scipy
 from scipy.sparse import csr_matrix
 train_csr =  csr_matrix(train_pivot)
 
