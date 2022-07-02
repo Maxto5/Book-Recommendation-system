@@ -16,14 +16,14 @@
 import numpy as np
 import pandas as pd
 
-books = pd.read_csv('Books.csv', dtype='unicode')
+books = pd.read_csv('book.csv', dtype='unicode')
 users = pd.read_csv('Users.csv')
 ratings = pd.read_csv('Ratings.csv')
 
 print('drop 0 rated books')
 ratings = ratings[ratings['Book-Rating'] > 0]
 
-books.drop(columns=['Image-URL-S','Image-URL-M','Image-URL-L'],inplace=True)
+#books.drop(columns=['Image-URL-S','Image-URL-M','Image-URL-L'],inplace=True)
 
 
 
