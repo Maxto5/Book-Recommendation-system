@@ -23,7 +23,7 @@ ratings = pd.read_csv('Ratings.csv')
 print('drop 0 rated books')
 ratings = ratings[ratings['Book-Rating'] > 0]
 
-books.drop(columns=['Image-URL-S','Image-URL-M','Image-URL-L'],inplace=True)
+#books.drop(columns=['Image-URL-S','Image-URL-M','Image-URL-L'],inplace=True)
 
 
 
