@@ -20,7 +20,7 @@ with col1:
     
 #final content dataframe
 buku = Book_Recommendation_system.train.drop_duplicates(subset='Book-Title',keep='first')
-buku = buku.drop(['User-ID','Age','Location','Image-URL-M','Image-URL-L'],axis=1)
+#buku = buku.drop(['User-ID','Age','Location','Image-URL-M','Image-URL-L'],axis=1)
 
 if title and button:
     colab_output = Book_Recommendation_system.collab(title)
