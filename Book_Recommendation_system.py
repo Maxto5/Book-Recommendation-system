@@ -18,9 +18,9 @@ import pandas as pd
 
 
 
-books = pd.read_csv('books.csv',on_bad_lines='skip',dtype='unicode')
-users = pd.read_csv('Users.csv',on_bad_lines='skip')
-ratings = pd.read_csv('Ratings.csv',on_bad_lines='skip')
+books = pd.read_csv('books.csv',dtype='unicode')
+users = pd.read_csv('Users.csv')
+ratings = pd.read_csv('Ratings.csv')
 
 print('drop 0 rated books')
 ratings = ratings[ratings['Book-Rating'] > 0]
