@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 import pandas as pd
-import Book_Recommendation_system as brs
+import Book_Recommendation_system
 st.set_page_config(layout="wide")
 st.title("Book Recommendation System")
 st.subheader("Hybrid Collaborative & Content filtering")
@@ -16,15 +16,15 @@ col3,col4 = st.columns((9,1))
 col5,col6 = st.columns((1,1))
 with col1:
     st.write("Book-titles")
-    st.dataframe(brs.book_title)
+    st.dataframe(Book_Recommendation_system.book_title)
     
 #final content dataframe
-buku = brs.train.drop_duplicates(subset='Book-Title',keep='first')
+buku = Book_Recommendation_system.train.drop_duplicates(subset='Book-Title',keep='first')
 buku = buku.drop(['User-ID','Age','Location','Image-URL-M','Image-URL-L'],axis=1)
 
 if title and button:
-    colab_output = brs.collab(title)
-    cont_output = brs.content(title)
+    colab_output = Book_Recommendation_system.collab(title)
+    cont_output = Book_Recommendation_system.content(title)
     reco_list=list(colab_output['title']) + list(cont_output['title'])
     
         
@@ -46,12 +46,12 @@ if title and button:
     
 with col5:
     st.write('Rating distribution')
-    st.pyplot(brs.dis)
+    st.pyplot(Book_Recommendation_system.dis)
 
     
 with col6:
     st.write('pairplot graphs')
-    st.pyplot(brs.pp)
+    st.pyplot(Book_Recommendation_system.pp)
     
 components.html("""<center> BCSC01/0043/2018 &nbsp Barasa Mathews &nbsp &copy 2022 <center>""")
 
